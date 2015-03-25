@@ -4,6 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var Sequelize = require('sequelize');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -11,6 +12,11 @@ var todos = require('./routes/todos');
 var todolists = require('./routes/todolists');
 
 var app = express();
+
+// database is sqlite
+var sequelize = new Sequelize('database', 'username', '', {
+  storage: 'sqlite.db'
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
