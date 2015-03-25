@@ -5,6 +5,9 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.send('get todolists');
 });
+router.get('/:id', function(req, res, next) {
+  res.send('get todolist');
+});
 router.post('/', function(req, res, next) {
   res.send('add todolist');
 });

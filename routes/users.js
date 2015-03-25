@@ -5,6 +5,9 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.send('get users');
 });
+router.get('/:id', function(req, res, next) {
+  res.send('get user');
+});
 router.post('/', function(req, res, next) {
   res.send('add user');
 });
