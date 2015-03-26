@@ -3,7 +3,8 @@ var User = require('user');
 
 
 var Todolist = sequelize.define('Todolist', {
-  title: Sequelize.TEXT
+  title: Sequelize.TEXT,
+  createdAt: Sequelize.DATE
 });
 
 Todolist.hasMany(Todo);
