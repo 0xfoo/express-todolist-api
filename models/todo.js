@@ -1,3 +1,4 @@
+var sequelize = require('db');
 var User = require('user');
 var Todolist = require('todolist');
 
